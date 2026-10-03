@@ -1,0 +1,43 @@
+{
+  "schema": "olliterator-prosecution-manifest-v1",
+  "project": "OLLITERATOR",
+  "artifact": {
+    "version": "0.2",
+    "revision": "Rev B",
+    "status": "PHYSICAL PASS"
+  },
+  "reference_hardware": {
+    "manufacturer": "Microsoft Corporation",
+    "product": "Surface Go 2",
+    "storage": "64GB eMMC",
+    "architecture": "x86-64",
+    "serial": "REDACTED"
+  },
+  "prosecuted_private_artifacts": {
+    "runtime_common_sha256": "7bd74492f1c5368188e67e86ae000d44205666add3bf359e181e69cde58421a3",
+    "provision_stage_sha256": "f438de9dd44dfd4470a48e6bb5c9f2a26ed7841e672999b88690b33b2b7f8f21",
+    "provision_hook_sha256": "4001861e58569308538867bd39723f3e57fea373a8981f16d8eaa587ee3c0096",
+    "wipe_source_sha256": "26ee3ed5b7c2950901de656a5b199f114060d94e80810caf367aa1a6684e9741",
+    "wipe_binary_sha256": "9460edea30e00b037d48cd39ebd38e0f9f88f33f18bf001d0ad373bd78adfafe",
+    "hardware_profile_sha256": "d16eb4afeafed44712214a4bb3a31466439b461605213cb08b351522634a75e1",
+    "grub_config_sha256": "1a1f5ed28bc9808288cfc8f7379389d415bbcdff82e1c986003e7e8ccc09fe31",
+    "initrd_sha256": "6fb41117a2c550f8af4a83bfae70fa849489d8ccf3ebda171e0a16c13cf0292a",
+    "iso_sha256": "f609cb7898ab1d2f827c4aea83d03cc3a2c3df536431901088c01d6117038f95"
+  },
+  "public_derivatives": {
+    "hardware_profile": {
+      "path": "profiles/microsoft/surface-go-2/64gb-emmc.conf",
+      "sha256": "9ab4509cbef124d3abad0e6a17d72211a536e155b8e400bc429c0e5d5bc879d1",
+      "difference": "Observed physical serial redacted. Serial is not an authorization predicate."
+    }
+  },
+  "scope": {
+    "physical_pass": "Microsoft Surface Go 2 / 64GB eMMC reference hardware",
+    "does_not_establish": [
+      "repeatability pass across multiple units",
+      "support for arbitrary Surface hardware",
+      "support for arbitrary Windows fleet layouts",
+      "physical pass for newly generated public build artifacts"
+    ]
+  }
+}

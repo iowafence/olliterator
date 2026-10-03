@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  safety-tests:
+    name: Safety tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc libc6-dev file shellcheck
+
+      - name: ShellCheck
+        run: |
+          shellcheck \
+            runtime/olliterator-common.sh \
+            runtime/provision-stage.sh \
+            runtime/hooks/02olliterator-provision \
+            tests/selector/test-selector-model.sh \
+            tests/selector/test-runtime-conformance.sh \
+            tests/wipe/test-wipe.sh \
+            tests/run-ci.sh \
+            build/build-ubuntu.sh
+
+      - name: Run safety suite
+        run: ./tests/run-ci.sh

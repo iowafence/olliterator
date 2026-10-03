@@ -1,0 +1,85 @@
+# ============================================================
+# OLLITERATOR
+# Local build output, generated artifacts, secrets, and junk
+# ============================================================
+
+# --- Secrets / credentials ---
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+credentials*
+secrets*
+
+# --- Generated boot / disk artifacts ---
+*.iso
+*.img
+*.raw
+*.qcow2
+*.vmdk
+*.vhd
+*.vhdx
+
+# --- Initramfs / generated archives ---
+*.cpio
+*.cpio.gz
+*.cpio.xz
+*.initrd
+initrd.*
+!docs/prosecution/**/MANIFEST.sha256
+
+# --- Unpacked Ubuntu / build trees ---
+build/work/
+build/output/
+build/cache/
+iso-root/
+iso-work/
+squashfs-root/
+mnt/
+tmp/
+temp/
+
+# --- Generated binaries ---
+bin/
+*.o
+*.a
+*.so
+*.so.*
+*.out
+
+# --- Runtime logs / evidence captured locally ---
+*.log
+*.trace
+*.dump
+
+# Evidence intended for publication must be deliberately
+# added in a reviewed format under docs/prosecution/.
+
+# --- Test scratch data ---
+tests/tmp/
+tests/output/
+tests/fixtures/generated/
+
+# --- Editors / IDEs ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Misc local state ---
+.cache/
+.local/
+.history
+*.bak
+*.tmp

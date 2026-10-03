@@ -1,0 +1,20 @@
+# Default ownership
+* @IowaFence
+
+# Safety-critical authorization and destructive paths
+/runtime/ @IowaFence
+/src/ @IowaFence
+/profiles/ @IowaFence
+/build/ @IowaFence
+/installer/ @IowaFence
+
+# Safety, release, and prosecution claims
+/docs/safety-model.md @IowaFence
+/docs/threat-model.md @IowaFence
+/docs/hardware-profiles.md @IowaFence
+/docs/releases.md @IowaFence
+/docs/prosecution/ @IowaFence
+
+# Tests and CI
+/tests/ @IowaFence
+/.github/workflows/ @IowaFence

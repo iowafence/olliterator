@@ -1,0 +1,23 @@
+autoinstall:
+  version: 1
+
+  locale: en_US.UTF-8
+
+  keyboard:
+    layout: us
+
+  refresh-installer:
+    update: false
+
+  identity:
+    hostname: olliterator-target
+    username: operator
+    # REQUIRED: replace with a password hash appropriate for Ubuntu autoinstall.
+    # Do not place a plaintext password here.
+    password: "<REPLACE_WITH_PASSWORD_HASH>"
+
+  storage:
+    layout:
+      name: direct
+      match:
+        path: /dev/mmcblk0
